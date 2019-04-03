@@ -1,0 +1,13 @@
+Compilation
+1)compile
+make(if the Makefile breaks, please first run: premake4 gmake then make)
+2)run
+./A2(please make sure that you try to run it from the same directory as A2)
+3)
+I run it on gl13
+
+Manual
+I complete all requirements and there aren't new features.
+
+At first, I put my eye on (4, 4, 4), so the two gnomons coincides with each other. And I use three different colours to distinguish the x, y and z axis.
+I set near plane to 1 and far plane to 10 at first, if you want to check the clipping please change it slowly.

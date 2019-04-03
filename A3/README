@@ -1,0 +1,16 @@
+Compilation
+1)compile
+make(if the Makefile breaks, please first run "premake4 gmake" then "make")
+2)run
+./A3 puppet.lua(Please make sure that puppet.lua is from the same directory as A3)
+3)
+I run it on gl18
+
+Manual
+I complete all requirements.
+
+I don't change the basic data structure too much. I just add a member in SceneNode called "parent" to indicate the parent of the child node. I also add a member in GeometryNode called "origin" to help recover the picking color.
+
+I change the tree structure slightly. I'll decribe it without considering the root node and the joint nodes to simplify. Torso is still the root node and it has five children: the left shoulder, the right shoulder, the neck, the left hip and the right hip. The left upper arm is the child of left shoulder and the right upper arm is the child of the right shoulder. The left thigh is the child of the left hip and the right thigh is the child of the right hip. The other edges are the same as the basic tree structure.
+
+The 15 DOFs are nearly the same as the basic ones. The only difference is that all parts which can be rotated rotates based on the end of their parent. And I also assume that you can only pick the parts which can be rotated, which means that you can pick something like the eyes. And I just use the provided trackball code and do a little change on it.

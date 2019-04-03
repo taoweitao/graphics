@@ -1,0 +1,17 @@
+Compilation
+1)compile
+make(if the Makefile breaks, please first run "premake4 gmake" then "make")
+2)run
+../A4 ../sample.lua(If you are in Assets/)
+../A4 nonhier.lua(If you are in Assets/ and want to test some .lua in Assets)
+./A4 ./sample.lua(If you are in A4/)
+./A4 Assets/nonhier.lua(If you are in A4/ and want to test some .lua in Assets)
+3)
+I run it on gl38
+
+Manual
+I complete all requirements. And I choose supersampling as my extra features. Because of that, it may run a little slowly. And there are some pictures which I'll explain one by one.
+In A4/, there are three pictures. sample.png (screenshot.png) is the best picture I generate and sample-aliasing.png is the picture I generate without supersampling. You can compare the two pictures to find that I accomplish the supersampling.
+In Assets/, there are five pictures. nonhier.png, simple-cows.png and macho-cows.png are pictures which are generated from corresponding .lua files. nonhier-bb.png and macho-cows-bb.png are pictures where I draw the bounding volumes instead of the meshes. It can prove that I accomplish the bounding volumes.
+And when you run the program, it will print something like "Progress: 12.3456%" which shows the progress now. When it arrives at 100%, it finishes the rendering.
+

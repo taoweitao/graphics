@@ -1,0 +1,15 @@
+Compilation
+1)compile
+make
+2)run
+./A0 (Please make sure that you try to run it from the same directory as A0.cpp)
+3)lab computer
+I run it on CS011348
+
+Manual
+I complete all requirements and there aren't new features.
+
+About the indicators:
+I use the randomly-coloured cubic to indicate the active cell. 
+Every frame it changes the color randomly. Sometimes in one frame it may be the same color as the bar in front of it. However, you just need to wait next frame and you can see it again.
+And the indicator can reflect the number of cubics you put. The default value is 1 because it only draw 1 cubic after pressing space key once. The special case is that when you copy zero cubic. It will still show 1 cubic because we want to know which is the active cell.

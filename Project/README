@@ -1,0 +1,49 @@
+Compilation
+1)compile
+make(if the Makefile breaks, please first run "premake4 gmake" then "make")
+2)run
+./A4 ./objective10.lua(Please make sure you are in the Project/ and put Project/ in cs488/)
+3)
+I run it on gl38
+
+Manual
+About the detail please see the documentation.
+
+And there are something you need to adjust if you want to run the other .lua file.
+
+In A4.cpp, there are different macros which are used to adjust different things.
+
+MAXHIT: The max times which lights use to hit an object.
+REFLECTION: 0 means no reflection; 1 means reflection; 2 means glossy reflection
+NUM_OF_REFLECTIONS: The sample rays in glossy reflection
+GLOSS: np in glossy model
+REFRACTION: true means refraction; false means no refraction
+ALIASE: true means aliasing; false means no aliasing
+ANTI_RATIO: The smaller it is, more pixels it'll aliase (0.1 - 0.3 is a good choice in common)
+NUM_OF_LIGHTS: The sample lights in soft shadow
+LIGHT_DISTANCE: The distance of the sample lights from original lights in soft shadow
+NUM_OF_RAYS: The sample rays in depth of field
+LENS_RADIUS: The distance of the sample rays from original rays in depth of field
+
+After changing these parameters, you can compile it again and run the .lua files.
+
+And I also make some change about the .lua grammers.
+1. When creating a new material, it needs another number which means the refractive index of the material.
+2. You can use gr.cylinder('name') to create a cylinder, please make sure the the default size is: x^2 + y^2 = 1 and -1 < z < 1.
+3. You can use gr.cone('name') to create a cone, please make sure the the default size is: x^2 + y^2 = z^2 and 0 < z < 1.
+4. You can use gr.texture("name.png") to create a texture, please make sure .png is in Project/ .
+5. You can use gr.bump("name.png") to create a bump, please make sure .png is in Project/ .
+6. Please make sure every objects have their own material, even if you map a texture or bump to it. But when you add a bump, there can be no texture in it.
+
+My objectives
+1. Primitives: Cylinder and Cone --objective1.lua
+2. Texuture Mapping --objective2.lua
+3. Bump Mapping --objective3.lua
+4. Reflection --objective4.lua
+5. Refraction --objective5.lua
+6. Glossy Reflection --objective6.lua
+7. Adaptive Anti-aliasing --objective7.lua
+8. Soft Shadow --objective8.lua
+9. Depth of Field --objective9.lua
+10. Final Scene --objective10.lua
+Please make sure to change the macro before run .lua files except objective10.lua!!!
